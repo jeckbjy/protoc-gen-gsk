@@ -1,0 +1,19 @@
+syntax = "proto3";
+package api;
+
+enum MsgID {
+    None = 0;
+    RequestID = 10;
+}
+
+service Greeter {
+    rpc Hello(Request) returns (Response) {}
+}
+
+message Request {
+    string name = 1;
+}
+
+message Response {
+    string msg = 1;
+}
